@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>typy-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+  <ol>
+    <li>Wymień z pamięci wszystkie typy proste i referencyjne występujące w js. </li>
+    <ul>
+      <li>Typy prymitywne</li>
+        <ul>
+        <li>number</li>
+        <li>string</li>
+        <li>boolean</li>
+        <li>undefined</li>
+        <li>null</li>
+        <li>symbol</li>
+      </ul>
+      <li>Typy referencyjne</li>
+      <ul>
+        <li>objects</li>
+        <li>array</li>
+        <li>regexp</li>
+      </ul>
+    </ul>
+    <li>Stwórz zmienne każdego typu. Wypisz w konsoli ich typy. Spróbuj wykonać na nich proste działania dodawania, odejmowania, mnożenia i dzielenia.</li>
+    <li>Masz przykładową zmienną: <code>let width = "20px";</code> Dodaj do niej wartość 30. Wynik wypisz w konsoli. </li>
+    <li>Sprawdź czy zmienna <code>age</code> istnieje. Jeżeli nie istnieje, stwórz taką zmienną i wypisz ją w konsoli. </li>
+  </ol>
+  </div>
+  <script>
+    // zadanie 2
+    let nr = 11;
+    let tekst = "przykładowy tekst"
+    let und;
+    let nic = null;
+    let object = {};
+
+  //  zadanie 3
+  let width = "20px";
+  width = String ((parseInt(width) + 30) + "px");
+  console.log(width);
+
+  // zadanie 4
+  if (typeof age === "undefined") {
+    let age = 25;
+    console.log("Wartość zmiennej age to: " + age);
+  }
+  </script>
+</body>
+</html>
