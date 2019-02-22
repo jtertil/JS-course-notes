@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>obiektMath-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+    <ol>
+      <li>
+        <p>
+          Stwórz 2 zmienne, które zawierają 2 losowe liczby.
+          Za pomocą odpowiedniej metody sprawdź, która jest większa.
+        </p>
+      </li>
+      <li>
+        <p>
+          Obie liczby z punktu pierwszego zaokrąglij w górę i w dół.
+        </p>
+      </li>
+    </ol>
+  </div>
+  <script>
+    // zadanie 1
+    const rndVarMin = 1;
+    const rndVarMax = 100;
+    let rndVar1 = Math.random() * (rndVarMax-rndVarMin+1) + rndVarMin;
+    let rndVar2 = Math.random() * (rndVarMax-rndVarMin+1) + rndVarMin;
+    if (rndVar1 == rndVar2) {
+      console.log("Zmienna1: "+rndVar1+" jest równa zmiennej2: "+rndVar2);
+    }
+    else if (Math.max(rndVar1, rndVar2) == rndVar1) {
+      console.log("Zmienna1: "+rndVar1+" jest większa niż zmienna2: "+rndVar2);
+    }
+    else if (Math.max(rndVar1, rndVar2) == rndVar2) {
+      console.log("Zmienna2: "+rndVar2+" jest większa niż zmienna1: "+rndVar1);
+    }
+    else {
+      console.log("coś poszło źle z zadaniem 1");
+    }
+
+    // zadanie 2
+    console.log("Zmienna1 po zaokrągleniu w dół to: "+Math.floor(rndVar1));
+    console.log("Zmienna1 po zaokrągleniu w górę to: "+Math.ceil(rndVar1));
+    console.log("Zmienna2 po zaokrągleniu w dół to: "+Math.floor(rndVar2));
+    console.log("Zmienna2 po zaokrągleniu w górę to: "+Math.ceil(rndVar2));
+  </script>
+</body>
+</html>
