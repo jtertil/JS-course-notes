@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zmienne-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+  <ol>
+    <li><p>Za pomocą var zadeklaruj 2 numeryczne zmienne myVar1 i myVar2.
+      Wypisz w konsoli wynik ich dodawania, odejmowania, mnożenie i dzielenia.
+      Wypisz też ich typ.</p> </li>
+    <li><p>Za pomocą var zadeklaruj dwie stałe CVAR1 i CVAR2.
+      W kolejnych liniach kodu zmień im wartości.
+      Czy możesz to zrobić? Czemu tak się dzieje? </p></li>
+    <li><p>Wypisz w konsoli zmienną text.
+      W kolejnej linii zdefiniuj tą zmienną za pomocą linijki:
+      <code>var text = "przykładowy tekst";</code>
+      Co zobaczyłeś w konsoli? Czemu tak się dzieje?</p></li>
+    <li><p>Za pomocą const zadeklaruj dwie stałe CONST1 i CONST2.
+      W kolejnych liniach kodu zmień im wartości.
+      Czy możesz to zrobić? Czemu tak się dzieje? </p></li>
+      <li><p>Wypisz w konsoli zmienną text2.
+        W kolejnej linii zdefiniuj tą zmienną za pomocą linijki:
+        <code>let text2 = "przykładowy tekst";</code>
+        Co zobaczyłeś w konsoli? Czemu tak się dzieje?</p></li>
+  </ol>
+  </div>
+  <script>
+    // zadanie 1
+    var myVar1 = 9;
+    var myVar2 = 5;
+
+    console.log(myVar1 + "+" + myVar2 + "=" + (myVar1 + myVar2))
+    console.log(myVar1 + "-" + myVar2 + "=" + (myVar1 - myVar2))
+    console.log(myVar1 + "*" + myVar2 + "=" + (myVar1 * myVar2))
+    console.log(myVar1 + "/" + myVar2 + "=" + (myVar1 / myVar2))
+    console.log(typeof(myVar1))
+    console.log(typeof(myVar2))
+
+    // zadanie 2
+    var CVAR1 = 32;
+    var CVAR2 = "zima";
+    console.log("mam "+CVAR1+" lata i jest "+CVAR2);
+    CVAR1 = 24,
+    CVAR2 = "wiosna";
+    console.log("mam "+CVAR1+" lata i jest "+CVAR2); // poszło gładko, to tylko var (wielkie litery nic nie zmieniają)
+
+    // zadanie 3
+    console.log(text);
+    var text = "przykładowy tekst";
+    // w konsoli zobaczymy undefined (ale nie błąd)- zadziałał hoisting zmiennej
+
+    // // zadanie 4
+    // const CONST1 = 32;
+    // const CONST2 = "zima";
+    // console.log("mam "+CONST1+" lata i jest "+CONST2);
+    // CONST1 = 24,
+    // CONST2 = "wiosna";
+    // console.log("mam "+CONST1+" lata i jest "+CONST2); // no niestety, to const
+
+    // // zadanie 5
+    // console.log(text2);
+    // let text2 = "przykładowy tekst";
+    // // w konsoli zobaczymy ReferenceError, próbuję użyć zmiennej przed zadeklarowaniem
+
+  </script>
+</body>
+</html>
