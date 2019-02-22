@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>typy-operatory</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+    <ol>
+      <li>
+        <p>
+          Z operatorów będziesz tak czy siak non stop korzystał.
+          Dla potrenowania zrób zmienne:
+          <code>
+            let var1 = 20;
+            let var2 = 33;
+            let var3 = "20";
+          </code>
+        </p>
+      </li>
+      <li>
+        <p>
+          Zwiększ zmienną var1 i var2 o 1. Spróbuj użyć skróconego zapisu.
+          Wypisz następnie w konsoli:
+          21 + 34 = 55 (oczywiście nie z palca, a z użyciem zmiennych)
+        </p>
+      </li>
+      <li>
+        <p>
+          Przyrównaj do siebie wartość i typ 2 zmiennych:
+          <code>
+            let a = 20;
+            let b = "20";
+          </code>
+          Jeżeli są takie same, wypisz w konsoli "Zmienne a i b są takie same",
+          w przeciwnym razie wypisz "Zmienne a i b nie są takie same"
+        </p>
+      </li>
+      <li>
+        <p>
+          Stwórz zmienną text z jedną linijką tekstu.
+          Dodaj do niej kilka linijek tekstu.
+          Użyj odpowiedniego operatora przypisania. Całość wyświetl w konsoli.
+        </p>
+      </li>
+    </ol>
+  </div>
+  <script>
+    // zadanie 1
+    let var1 = 20;
+    let var2 = 33;
+    let var3 = "20";
+
+    // zadanie 2
+    var1 ++;
+    var2 ++;
+    console.log(var1+"+"+var2+"="+(var1 + var2));
+
+    // zadanie 3
+    let a = 20;
+    let b = "20";
+
+    if (a === b) {
+      console.log("Zmienne a i b są takie same i teg samego typu.");
+    }
+    else if (a == b) {
+      console.log("Zmienne a i b są takie same.");
+    }
+    else {
+      console.log("Zmienne a i b nie są takie same.");
+    }
+
+    // zadanie 4
+    let text = "Znów na przystanku zaczynasz swój dzień\n"
+    text += "pod powiekami jeszcze plącze się sen\n"
+    text += "jesteś jak dziecko rozgrzanego słońca\n"
+    text += "nikt cię nie kuma tak naprawdę do końca\n"
+    console.log(text);
+
+  </script>
+</body>
+</html>
