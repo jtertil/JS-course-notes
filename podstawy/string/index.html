@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>string-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+    <ol>
+      <li>
+        <p>
+          Stwórz zmienną text z dowolnym zdaniem. Wypisz w konsoli to zdanie i jego długość.
+        </p>
+      </li>
+      <li>
+        <p>
+          Mamy tekst:
+          <code>const text2 = "Bardzo lubię jeść marchewkę";</code>
+          Wypisz w konsoli liczbę wyrazów w tym zdaniu.
+        </p>
+      </li>
+      <li>
+        <p>
+          Ktoś w formularzu wpisał imię z małej litery. Super bohater wkracza do akcji i musi je poprawić:
+          <code>let name = "marcin"</code>
+          Popraw to imię tak by zaczynało się dużą literą.
+        </p>
+      </li>
+      <li>
+        <p>
+          Mamy zmienną:
+          <code>const email = "loremimpsum@gmail.com";</code>
+          Sprawdź czy występuje w niej znak @. Jeżeli tak wypisz w konsoli "email zawiera @", w przeciwnym razie wypisz "email nie zawiera @"
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>const text = "Uczę się stringów w C++";</code>
+          Korzystając z indexOf, lastIndefOf, i którejkolwiek metody do wycinania fragmentów tekstu uzyskaj tekst: "Uczę się stringów w Javascript". Nie wykorzystuj replace().
+        </p>
+      </li>
+      <li>
+        <p>
+          Powiedzmy, że mamy zmienną z adresem strony:
+          <code>let url = "http://mojastrona.pl"</code>
+          Chcemy do tego adresu po znaku zapytania wstawić zmienną "text", którą potem ewentualnie mogła by odczytać inna podstrona.
+          Zmienna ta powinna mieć wartość tekstu z 5 zadania:
+          <code>let url = "http://mojastrona.pl?text=Uczę się stringów w Javascript"</code>
+          Jak wiesz, spacji i podobnych znaków nie może być w adresie strony. Za pomocą odpowiednich zmiennych, dodawania i wykorzystując odpowiednie metody uzyskaj prawidłowy odpowiednio zakodowany adres url.
+        </p>
+      </li>
+      <li>
+        <p>
+          Mamy zmienną:
+          <code>const text = "ALA ma kota";</code>
+          Wypisz w konsoli:
+          <ul>
+            <li>tekst pisany małymi literami</li>
+            <li>tekst pisany dużymi literami</li>
+            <li>tekst pisany naprzemiennie dużymi i małymi literami</li>
+            <li>Zamień imię AlA na OLA i wypisz wynik w konsoli</li>
+            <li>Wypisz w konsoli fragment " ma kota"</li>
+          </ul>
+        </p>
+      </li>
+    </ol>
+  </div>
+  <script>
+    // zadanie 1
+    let text = "Wieczność jest bardzo nudna, szczególnie pod koniec"
+    console.log(text)
+    console.log(text.length)
+
+    // zadanie 2
+    const text2 = "Bardzo lubię jeść marchewkę";
+    const pieces = text2.split(" ");
+    console.log(pieces.length);
+
+    // zadanie 3
+    let name = "Marcin"
+    name = name.charAt(0).toUpperCase() + name.slice(1)
+    console.log(name)
+
+    // zadanie 4
+    const email = "loremimpsum@gmail.com";
+    console.log(email.indexOf("@"));
+    if (email.indexOf("@") !== -1 ) {
+      console.log("email zawiera @");
+    }
+    else {
+      console.log("email nie zawiera @");
+    }
+
+    // zadanie 5
+    const text3 = "Uczę się stringów w C++.";
+    console.log(text3);
+    const text4 = text3.slice(0, text3.indexOf("C++")) + "Javascript.";
+    console.log(text4);
+
+    // zadanie 5.2
+    let text5 = text3.replace("C++", "Javascript");
+    console.log(text5);
+
+    // zadanie 6
+    let url = "http://mojastrona.pl";
+    url = url + "?text=" + encodeURI(text5);
+    console.log(url);
+
+    // zadanie 7
+    const text6 = "ALA ma kota";
+    console.log(text6.toLowerCase());
+    console.log(text6.toUpperCase());
+    let text7 = "";
+    for (i = 0; i < text6.length; i ++) {
+      if (i % 2 == 0) {
+        text7 += text6.charAt(i).toUpperCase();
+      }
+      else {
+        text7 += text6.charAt(i).toLowerCase();
+      }
+    }
+    console.log(text7);
+
+    console.log(text6.replace("ALA", "OLA"));
+    console.log(text6.slice(text6.indexOf("ma")));
+
+
+  </script>
+</body>
+</html>

@@ -63,12 +63,12 @@ if (text7.indexOf("psa") > -1) {
 }
 
 // zastosowanie lastIndexOf()
-"Ala ma kota i tak już jest".lastIndexOf("a"); //15 - bo ostatnia litera "a" występuje na pozycji 15
+"Ala ma kota i tak już jest".lastIndexOf("a"); // 15 - bo ostatnia litera "a" występuje na pozycji 15
 
 const url = "http://nazwastrony.pl/przykladowaNazwaPliku.php";
-//korzystając z metod opisanych poniżej tniemy url na części
-console.log( url.slice(url.lastIndexOf(".")+1) ); //php
-console.log( url.slice(url.lastIndexOf("/")+1, url.lastIndexOf(".")) ); //przykladowaNazwaPliku
+// korzystając z metod opisanych poniżej tniemy url na części
+console.log( url.slice(url.lastIndexOf(".")+1) ); // php
+console.log( url.slice(url.lastIndexOf("/")+1, url.lastIndexOf(".")) ); // przykladowaNazwaPliku
 
 // metoda .substr(początek, koniec), .substring(początek, ilość znaków) -- zwraca wycinek tekstu
 const text8 = "Ala ma kota";
