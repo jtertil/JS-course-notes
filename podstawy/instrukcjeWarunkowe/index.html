@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>instrukcjeWarunkowe-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+  <ol>
+    <li>
+      <p>
+        Stwórz trzy zmienne: a = 2, b = 3, c = 4.
+        Za pomocą instrukcji warunkowych sprawdź, która zmienna jest największa
+        (pomiń wariant kiedy zmienne mogły by być równe).
+      </p>
+    </li>
+    <li>
+      <p>
+        Masz kod prostego formularza:
+        <blockquote>
+          <pre>
+            <code>
+              &ltform id="myForm"&gt
+                &ltlabel for="formAge"&gtWpisz wiek&lt/label&gt
+                &ltinput type="text" id="formAge" name="age"&gt
+                &ltbutton type="submit"&gtSprawdź&lt/button&gt
+              &lt/form&gt
+            </code>
+          </pre>
+        </blockquote>
+        W poniższym kodzie po wysłaniu takiego formularza pobieram wartość pola age.
+        Twoim zadaniem jest sprawdzić czy użytkownik wpisał liczbę.
+        Spróbuj użyć odpowiedniej metody konwertującej. Dodatkowo sprawdź,
+        czy wpisana liczba lat jest większa lub równa od 18.
+        Jeżeli tak, wpisz w konsoli "wszystko ok",
+        w przeciwnym razie wypisz "niestety dostęp zablokowany."
+        <blockquote>
+          <pre>
+            <code>
+              //podpinamy się pod wysyłanie formularza
+              document.querySelector('#myForm').addEventListener('submit', function(e) {
+                  e.preventDefault();
+
+                  //pobieramy wartość pola #formAge
+                  const age = document.querySelector('#formAge').value;
+
+                  //w zmiennej age jest tekst wpisany w formularz.
+                  //zamień go na liczbę i sprawdź czy po zamianie masz liczbę czy nie liczbę
+                  //jeżeli liczba jest większa lub równa 18, wypisz w konsoli
+                  //"wszystko ok", w przeciwnym razie wypisz "niestety, dostęp zablokowany"
+
+                  //kod pisz tutaj, przed poniższą klamrą i nawiasem
+              })
+            </code>
+          </pre>
+        </blockquote>
+      </p>
+    </li>
+  </ol>
+  </div>
+  <form id="myForm">
+    <label for="formAge">Wpisz wiek</label>
+    <input type="text" id="formAge" name="age">
+    <button type="submit">Sprawdź</button>
+</form>
+  <script>
+    // zadanie 1
+    let a = 2;
+    let b = 3;
+    let c = 4;
+
+    if (a > b && a > c) {
+      console.log("a")
+    }  else {
+      if (b > c){
+        console.log("b");
+      } else {
+        if (c > b) {
+          console.log("c");
+        } else {
+          console.log("trudno powiedzieć");
+        }
+      }
+    }
+    // zadanie 2
+    //podpinamy się pod wysyłanie formularza
+    document.querySelector('#myForm').addEventListener('submit', function(e) {e.preventDefault();
+
+    //pobieramy wartość pola #formAge
+    const age = document.querySelector('#formAge').value;
+
+    //kod pisz tutaj, przed poniższą klamrą i nawiasem
+    decyzja = (age >= 18)? "wszystko ok" :"niestety, dostęp zablokowany";
+    console.log(decyzja)
+    })
+
+
+  </script>
+</body>
+</html>
