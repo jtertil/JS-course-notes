@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>petle-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+    <ol>
+      <li>
+        Za pomocą pętli wypisz w konsoli tekst:
+        <pre>******</pre>
+        Gwiazdki powinny być w jednej linii. Skorzystaj tutaj z dodatkowej zmiennej str.
+      </li>
+      <li>
+        Za pomocą pętli wypisz w konsoli tekst
+        <pre>12345678910</pre>
+      </li>
+      <li>
+        Za pomocą pętli w pętli wypisz w konsoli tekst:
+        <pre>
+******
+******
+******
+******
+        </pre>
+      </li>
+      <li>
+        Za pomocą pętli (nie musi być pojedyncza) wypisz w konsoli tekst:
+        <pre>
+╔═══════════════════════╗
+║  To jest jakiś tekst  ║
+╚═══════════════════════╝
+        </pre>
+      </li>
+    </ol>
+  </div>
+  <script>
+    // zadanie 1
+    let str = "";
+    for (let i = 0; i < 6; i++) {
+      str += "*";
+    }
+    console.log(str);
+
+    // zadanie 2
+    let j = 0
+    let str2 = ""
+    while (j < 10) {
+      j++;
+      str2 += j
+    } console.log(str2);
+
+    // zadanie 3
+    let str3 = "\n"
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 6; j++) {
+        str3 += "*"
+      } str3 += "\n"
+    }console.log(str3);
+
+    // zadanie 4
+    let txt4 = "To jest jakiś tekst"
+    let ramka = "\n╔ramk╗\n║  " + txt4 + "  ║\n╚ramk╝\n"
+    let tmp = ""
+
+    for (let i = 0; i < (txt4.length + 4); i++) {
+      tmp += "═"
+    }
+    console.log(ramka.replace(/ramk/gi, tmp));
+
+
+  </script>
+</body>
+</html>
