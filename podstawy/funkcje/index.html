@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>funkcje-zadania</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+  <ol>
+    <li>
+      <pre>
+        Napisz funkcję, która przyjmie jeden parametr - dowolny tekst
+        Funkcja niech ZWRACA tekst "Liczba liter: ..." gdzie ... to liczba liter tekstu.
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcje, która zsumuje przekazaną do niej tablicę i zwraca wynik (sumę)
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcję, która przyjmie dowolny tekst
+        Funkcja niech zwraca tekst, który ma zmiksowana wielkość liter np:
+        input -> Ala ma kota
+        output -> AlA Ma kOtA
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcje, która będzie wymagać 2 atrybutów.
+        Funkcja niech sprawdza, czy oba atrybuty są numerami.
+        Funkcja ma zwracać iloczyn (*) obu liczb.
+        Jeżeli któryś z atrybutów nie jest liczba, funkcja niech zwraca false.
+        NIE Wywołuj na razie tej funkcji
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcje, która przyjmuje 2 parametry:
+        1) imię - np: Ala
+        2) miesiąc - np: styczeń
+
+        Funkcja ma zwracać:
+        - jeżeli miesiąc to -> grudzień, styczeń, luty
+        "Ala jeździ na sankach"
+
+        - jeżeli miesiąc to -> marzec, kwiecień, maj
+        "Ala chodzi po kałużach"
+
+        - jeżeli miesiąc to -> czerwiec, lipiec, sierpień
+        "Ala się opala"
+
+        - jeżeli miesiąc to -> wrzesień, październik, listopad "Ala zbiera liście"
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Wywołaj funkcje z powyższego zadania przekazując do niej zmienne:
+        - Twoje imię
+        - dowolny miesiąc
+
+        Dopisz w tej funkcji zabezpieczenie, które pozwoli wpisać miesiąc małymi lub dużymi literami Jeżeli miesiąc jest "innym słowem", funkcja niech zwraca "Ala uczy się JavaScript"
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Mamy przykładowy tekst:
+        <code>
+          const str = "Ania|Marcin|Bartek|Piotr|Kuba|Beata|Agnieszka";
+        </code>
+        Napisz funkcję, która przyjmie 2 atrybuty:
+        - tekst
+        - znak rozdziału (np |)
+
+        Skorzystaj z odpowiedniej metody String (poszukaj w necie), tak aby rozdzielić przekazany do funkcji tekst na części za pomocą przekazanego znaku rozdziału. W wyniku rozdzielenia powinieneś dostać tablicę. Funkcja niech posegreguje tą tablicę alfabetycznie. Następnie funkcja niech połączy tą tablicę w nowy tekst wstawiając między imiona znak wcześniejszego rozdziału. Skorzystaj tutaj z innej odpowiedniej metody js.
+
+        input -> "Ania|Marcin|Bartek"
+        output -> "Ania|Bartek|Marcin"
+
+        Wywołaj tę funkcję przekazując do niej str z początku zadania
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Wygeneruj pod zmienną "tab" 10-elementową tablicę z losowymi liczbami.
+        Napisz funkcję getMinFromTab, do której przekażesz powyższą tablicę.
+        Funkcja powinna zwrócić najmniejszą liczbę z tablicy.
+        Za pomocą console.log wypisz wartość zwróconą przez funkcję.
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz 2 funkcje. Każda z nich niech przyjmuje tablicę imion.
+
+        Pierwsza funkcja niech zwraca nową tablicę, w której imiona są zapisane dużymi literami. Druga funkcja niech zwraca nową tablicę, w której imiona mają zmienną wielkość liter. W przypadku drugiej funkcji do zamiany imion skorzystaj z funkcji z zadania 2.
+
+        input -> ["Ania" , "Marcin" , "Bartek" , "Piotr"]
+        output1 -> ["ANIA" , "MARCIN" , "BARTEK" , "PIOTR"]
+        output2 -> ["AnIa" , "MaRcIn" , "BaRtEk" , "PiOtR"]
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcję która przyjmie 2 atrybuty:
+        - tekst
+        - liczbę n
+
+        Funkcja niech zwraca napis będący powtórzony n razy:
+        input : tekst: "ala", n: 4
+        output: "alaalaalaala"
+
+        Funkcja niech sprawdza czy oba parametry są podane.
+        Jeżeli parametr tekst nie jest podany lub nie jest tekstem, funkcja powinna go ustawić na pusty string "".
+        Jeżeli parametr n nie jest podany, funkcja powinna ustawić go na 2.
+
+        Przykłady użycia:
+
+        input : tekst: "kot", n: 2
+        output: "kotkot"
+
+        input : tekst: "x", n: nie podany
+        output: "xx"
+
+        input : tekst: nie podany, n: 2
+        output: ""
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Napisz funkcję counter, która przy kolejnych wywołaniach będzie zwracać coraz większą wartość. Przy pierwszym wywołaniu powinna zwrócić 0, przy drugim 1, przy trzecim 2...
+        Nie używaj tutaj zmiennej globalnej.
+      </pre>
+    </li>
+    <li>
+      <pre>
+        Nie korzystając z gotowych funkcji Math.abs(), Math.pow() i Math.max() napisz ich proste odpowiedniki czyli funkcje myAbs(nr), myPow(nr, pow) i myMax(). Skorzystaj przy tym z instrukcji if i pętli.
+      </pre>
+    </li>
+  </ol>
+  </div>
+  <script>
+    // zadanie 1
+    function zad1(txt1) {
+      return txt1.length
+    }
+
+    // zadanie 2
+    function zad2(arr) {
+      let sum = 0;
+      for (i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      } return sum;
+    }
+
+    // zadanie 3
+    function zad3(txt3) {
+      let txt3out = ""
+      for (i = 0; i < txt3.length; i++) {
+        if (i % 2 === 0) {
+          txt3out += txt3.charAt(i).toUpperCase()
+        } else {
+          txt3out += txt3.charAt(i).toLowerCase()
+        }
+      } return txt3out
+    }
+
+    // zadanie 4
+    function zad4(num1, num2) {
+      if (typeof(num1) !== "number" || typeof(num2) !== "number") {
+        return false
+      } else {
+        return num1 * num2
+      }
+    }
+
+    // zadanie 5
+    function zad5(name, msc) {
+      msc = msc.toLowerCase();
+      const rok = ["grudzień", "styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad"]
+      if (rok.indexOf(msc) === -1) {
+        return "nie znam takiego miesiąca: " + msc
+      }
+      if (rok.indexOf(msc) <= 2) {
+        return name + " jeździ na sankach"
+      }
+      if (rok.indexOf(msc) <= 5) {
+        return name + " skacze po kałużach"
+      }
+       if (rok.indexOf(msc) <= 8) {
+        return name + " się opala"
+      }
+       if (rok.indexOf(msc) <= 11) {
+        return name + " zbiera liście"
+      }
+    }
+
+    // zadanie 6
+    console.log(zad5("Jacek", "MaRZEC"))
+  </script>
+</body>
+</html>
