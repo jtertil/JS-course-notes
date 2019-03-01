@@ -3,6 +3,7 @@ function sum(a, b) {
     console.log(a + b);
 }
 sum(2, 3); // 5
+sum(2) // NaN - ponieważ będzie sumował 2 i undefined
 
 function writeText(name) {
   if (name === undefined) {
